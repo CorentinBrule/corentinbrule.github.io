@@ -1,4 +1,3 @@
-var rayon;
 var posYLunettes;
 var posYMoustache;
 
@@ -10,7 +9,7 @@ var posYYeux;
 
 function setup(){
    createCanvas(windowWidth,windowHeight);
-   frameRate(10);
+   frameRate(20);
 
    posYLunettes = height/2-40;
    posYLunettesH=posYLunettes-10;
@@ -24,8 +23,6 @@ function setup(){
    posYMoustache=height/2+70;
    moustaches[0] = new Moustache(width/2,posYMoustache,90,true);
    moustaches[1] = new Moustache(width/2,posYMoustache,90,false);
-
-   background(0);
 }
 
 function windowResized(){
@@ -37,10 +34,6 @@ function windowResized(){
 function draw(){
 
   background(255);
-
-  //Tête
-  //fill(255);
-  //ellipse(width/2,height/2,300,500);
 
   //yeux
   var i=0;
@@ -60,8 +53,6 @@ function draw(){
   lunettes.display();
   lunettes.update();
   //Lunettes tombent
-
-
 
 }
 
@@ -149,8 +140,8 @@ class Yeux{
     ellipseMode(CENTER);
     fill(0);
     ellipse(this.posX,this.posY,this.rayon*2,this.rayon*2);
+
     applyMatrix();
-    //translate(this.posX,this.posY);
     translate(this.distX,this.distY);
     noStroke();
     fill(255);
