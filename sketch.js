@@ -11,6 +11,8 @@ function setup(){
    createCanvas(windowWidth,windowHeight);
    frameRate(20);
 
+   background(255);
+   
    posYLunettes = height/2-40;
    posYLunettesH=posYLunettes-10;
    posYLunettesB=posYLunettes+30;
