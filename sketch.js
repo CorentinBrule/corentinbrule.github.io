@@ -12,7 +12,7 @@ function setup(){
    frameRate(20);
 
    background(255);
-   
+
    posYLunettes = height/2-40;
    posYLunettesH=posYLunettes-10;
    posYLunettesB=posYLunettes+30;
@@ -71,7 +71,6 @@ function mouseDragged(){
       if(pmouseY-mouseY>0){
         moustaches[i].velocity-=1;
       }
-      println(pmouseY-mouseY);
 
     }
   }
